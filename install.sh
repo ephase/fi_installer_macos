@@ -32,7 +32,10 @@ default_password=""
 default_user=""
 default_server=""
 
-usage () { cat  <<EOF MacOS FusionInventory Installer -- Install
+usage () { 
+cat  << EOF 
+
+    MacOS FusionInventory Installer -- Install
     FusionInventory agent on MacOSX
 
     arg: -s|--server   <server>
