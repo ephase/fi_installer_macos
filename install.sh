@@ -144,12 +144,12 @@ clean () {
 }
 
 
-# Check user
-[[ "$(whoami)" == "root" ]] || fatal 1 "You must be root (or use sudo) tu run this script."
-
 trap clean 0
 [[ "$FI_INSTALLER_URL" == "" ]] && fatal 5 "can't grab F.I. installer URL, check your connexion\n" "err"
 process_args "$@"
+
+# Check user
+[[ "$(whoami)" == "root" ]] || fatal 1 "You must be root (or use sudo) tu run this script."
 
 debug "Process variables"
 server="${server:=$default_server}"
