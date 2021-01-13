@@ -149,7 +149,7 @@ trap clean 0
 process_args "$@"
 
 # Check user
-[[ "$(whoami)" == "root" ]] || fatal 1 "You must be root (or use sudo) tu run this script."
+[[ "$(whoami)" == "root" ]] || fatal 1 "You must be root (or use sudo) to run this script."
 
 debug "Process variables"
 server="${server:=$default_server}"
